@@ -1,0 +1,92 @@
+
+
+body {
+  background-color: #303030;
+  color: #b2b9bf;
+}
+
+
+.TopBar input{
+  color: #b2b9bf;
+  font-size: 25px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#register{
+  background-color: #5a5a5a;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #272727;
+
+}
+
+#login{
+  position: absolute;
+  top:30%;
+  left:40%;
+
+}
+#login .Login legend{
+  font-size: 30px;
+}
+
+#login .Login{
+padding: 10%;
+}
+
+#login .submit{
+  color: #b2b9bf;
+  cursor: pointer;
+  margin-top: 10%;
+  margin-left: 30%;
+  font-size: 20px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+}
+
+.LoginUsername input ,.LoginPassword input{
+  color: #FFF;
+  background: none;
+  outline: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.LoginUsername label, .LoginPassword label{
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(40%);
+  transition: 0.5s;
+}
+
+
+.LoginUsername input:focus ~ .LoginUsername label {
+  position: absolute;
+  background-color: red;
+  transform: translateY(-70%);
+  color: red;
+}
+
+
+#registerbutton{
+  margin-right: 50px;
+}
+
+h{
+  font-size: 30px;
+  margin: 5%;
+  margin-right: 0%;
+  cursor: pointer;
+}
+

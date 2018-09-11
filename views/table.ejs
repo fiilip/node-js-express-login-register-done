@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+</head>
+<body>
+
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<table id="users">
+    <tr>
+        <th>Name:</th>
+        <th>Password:</th>
+        <th>Id</th>
+        <th>Delete:</th>
+        <th>Edit:</th>
+    </tr>
+    <% if(data) %>
+    <% data.forEach(function (user) { %>
+        <tr>
+            <td><%= user.name%> </td>
+            <td> <%= user.password %> </td>
+            <td> <%= user.id %> </td>
+            <td>
+                <form action="/delete" method="post" >
+                    <input type="submit" value="Delete" name="delete" />
+                    <input type="hidden" value="<%= user.id%>" name="idUser" />
+                </form>
+            </td>
+            <td>
+                <form action="/edit" method="post" >
+                    <input type="submit" value="Edit" name="edit" />
+                    <input type="hidden" value="<%= user.id%>" name="idUser" />
+                </form>
+            </td>
+        </tr>
+
+    <% }); %>
+
+</table>
+
+
+</body>
+</html>

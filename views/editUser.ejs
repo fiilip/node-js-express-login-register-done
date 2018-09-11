@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/public/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<form id="update" action="/update" method="post">
+    <fieldset>
+        <legend>Update</legend>
+        <label for="updateUser">Username:</label>
+        <input type="text" id="updateUser" name="username" placeholder="<%= data[0].name; %>" ><br/>
+        <label for="updatePassword">Password:</label>
+        <input type="password" id="updatePassword" name="password"><br/>
+        <input type="submit" form="update" value="update" name="update">
+        <input type="hidden" value="<%=data[0].id%>" name="idUser">
+    </fieldset>
+</form>
+
+
+</body>
+</html>

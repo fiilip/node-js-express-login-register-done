@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+  <form class="TopBar" action="/Register" method="post" >
+    <input class="Register" type="submit" value="Register" name="Register">
+  </form>
+
+  <form class="TopBar">
+    <input class="TopLogin" type="submit" value="Login">
+    <input class="Table" type="submit" value="Table">
+  </form>
+
+    <form id="login" action="/login" method="post">
+
+      <fieldset class="Login">
+        <legend>Login</legend>
+
+        <div class="LoginUsername">
+          <label for="loginUser">Username</label>
+          <input type="text" id="loginUser" name="username">
+        </div>
+
+        <div class="LoginPassword">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password">
+        </div>
+
+        <input class="submit" type="submit" form="login" value="login" name="login">
+      </fieldset>
+
+    </form>
+
+
+  </body>
+</html>
