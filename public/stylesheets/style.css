@@ -1,8 +1,13 @@
 
-
 body {
   background-color: #303030;
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  background-color: rgb(17, 17, 17);
+  background-size: cover;
+  font-family: sans-serif;
   color: #b2b9bf;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -15,28 +20,33 @@ body {
   cursor: pointer;
 }
 
-#register{
+#register {
   background-color: #5a5a5a;
   margin-left: 30%;
   margin-right: 30%;
   border-style: solid;
   border-width: 2px;
   border-color: #272727;
-
 }
+
 
 #login{
+  margin: 2%;
+  padding: 2%;
+  border: 5px solid;
+  border-radius: 10px;
+  border-color: #faa8705e;
+  background-color: rgba(25, 25, 25,0.5);
+  top:40%;
+  left: 50%;
   position: absolute;
-  top:30%;
-  left:40%;
+  transform:translate(-50%,-50%);
+}
 
-}
-#login .Login legend{
-  font-size: 30px;
-}
+
 
 #login .Login{
-padding: 10%;
+
 }
 
 #login .submit{
@@ -52,35 +62,87 @@ padding: 10%;
 
 }
 
-.LoginUsername input ,.LoginPassword input{
+.Login input{
+  font-size: 20px;
   color: #FFF;
   background: none;
   outline: none;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   border-top: none;
   border-left: none;
   border-right: none;
+  border-color: #faa8705e;
+
 }
 
-.LoginUsername label, .LoginPassword label{
+.Login label{
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 48%;
+  padding: 10%;
+  padding-left: 12%;
+  pointer-events: none;
+  transition: 0.5s;
+  /*
   pointer-events: none;
   position: absolute;
   transform: translateY(40%);
   transition: 0.5s;
+  */
+}
+
+.Login .LoginUsername label{
+  position: absolute;
+  top:27%;
 }
 
 
-.LoginUsername input:focus ~ .LoginUsername label {
+.Login input:focus + label,
+.Login input:valid + label{
+  font-size: 11px;
   position: absolute;
-  background-color: red;
-  transform: translateY(-70%);
-  color: red;
+  transform: translateY(-40%);
+  color: #666d73;
+
 }
 
 
 #registerbutton{
   margin-right: 50px;
+}
+
+#submitLogout{
+  color: #b2b9bf;
+  font-size: 20px;
+  background: none;
+  outline: none;
+  border: none;
+  left: 90%;
+  transform: translate(100%,-130%);
+  position: absolute;
+  cursor: pointer;
+}
+
+#submitLogout:hover{
+  color: #FFF;
+}
+
+.navbar{
+  padding: 10px;
+  margin: auto;
+  background: rgba(39, 39, 39, 0.79);
+}
+
+a{
+  color: #b2b9bf;
+  margin-right: 10%;
+
+}
+
+a:hover{
+  color: #FFF;
 }
 
 h{
@@ -89,4 +151,3 @@ h{
   margin-right: 0%;
   cursor: pointer;
 }
-

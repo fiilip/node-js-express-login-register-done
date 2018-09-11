@@ -6,34 +6,38 @@
   </head>
   <body>
 
+<!--
   <form class="TopBar" action="/Register" method="post" >
     <input class="Register" type="submit" value="Register" name="Register">
   </form>
-
   <form class="TopBar">
     <input class="TopLogin" type="submit" value="Login">
     <input class="Table" type="submit" value="Table">
   </form>
+  //-->
+
+  <% include navBar.ejs %>
 
     <form id="login" action="/login" method="post">
 
-      <fieldset class="Login">
-        <legend>Login</legend>
-
-        <div class="LoginUsername">
-          <label for="loginUser">Username</label>
-          <input type="text" id="loginUser" name="username">
+      <div class="Login">
+        <h2 class="LoginText">Login</h2>
+        <div class="LoginUsername" id="LoginUsername">
+          <input class="loginUser"  type="text" name="username" required="">
+          <label class="loginUser" for="LoginUser">Username</label>
         </div>
 
         <div class="LoginPassword">
-          <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" name="password">
+          <input class="loginPassword" type="password" name="password" required="">
+          <label class="loginPassword" for="loginPassword">Password</label>
         </div>
 
-        <input class="submit" type="submit" form="login" value="login" name="login">
-      </fieldset>
+        <input class="submit" id="submit" type="submit" form="login" value="Login" name="login" >
+
+        </div>
 
     </form>
+
 
 
   </body>

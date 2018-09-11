@@ -16,7 +16,8 @@ const updateUserRouter = require("./routes/registerUser");
 const loginRouter = require("./routes/loginUser");
 const safeRouter = require("./routes/safe");
 const logoutRouter = require("./routes/logoutUser");
-const Register = require("./routes/Register");
+const GoToRegister = require("./routes/Register");
+const ShowTable = require("./routes/ShowTable");
 
 let app = express();
 
@@ -50,7 +51,8 @@ app.use("/update", updateUserRouter);
 app.use("/login",loginRouter);
 app.use("/safe", safeRouter);
 app.use("/logout",logoutRouter);
-app.use("/Register",Register);
+app.use("/Register",GoToRegister);
+app.use("/Table",ShowTable);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
