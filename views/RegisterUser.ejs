@@ -10,15 +10,26 @@
 <% include navBar.ejs %>
 
 <form id="register" action="/register" method="post">
-    <legend>Register</legend>
-    <label for="registerUser">Username:</label>
-    <input type="text" id="registerUser" name="username"><br/>
 
-    <label for="registerPassword">Password:</label>
-    <input type="password" id="registerPassword" name="password"><br/>
+    <div class="Register">
+        <h2 class="RegisterText">Register</h2>
 
-    <input type="submit" form="register" value="Register" name="register" id="registerbutton">
+        <div class="RegisterUsername" id="registerUsername">
+            <input class="RegisterUser"  type="text" name="username" required="">
+            <label class="RegisterUser" for="registerUser">Username</label>
+        </div>
+
+        <div class="RegisterPassword">
+            <input class="RegisterPassword" type="password" name="password" required="" >
+            <label class="RegisterPassword" for="registerPassword">Password</label>
+        </div>
+
+        <input class="submit" id="submit" type="submit" form="register" value="Register" name="register" >
+
+    </div>
+
 </form>
+
 
 
 </body>

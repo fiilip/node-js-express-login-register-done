@@ -20,17 +20,48 @@ body {
   cursor: pointer;
 }
 
-#register {
-  background-color: #5a5a5a;
-  margin-left: 30%;
-  margin-right: 30%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #272727;
+#submitLogout{
+	color: #b2b9bf;
+	font-size: 20px;
+	background: none;
+	outline: none;
+	border: none;
+	transform: translate(100%,-130%);
+	position:absolute;
+	left:90%;
+	cursor: pointer;
+
+}
+
+#submitLogout:hover{
+	color: #FFF;
+}
+
+.navbar{
+	padding: 0.5%;
+	margin: auto;
+	background: rgba(39, 39, 39, 0.79);
+}
+
+a{
+	color: #b2b9bf;
+	margin-right: 10%;
+
+}
+
+a:hover{
+	color: #FFF;
+}
+
+h{
+	font-size: 30px;
+	margin: 5%;
+	margin-right: 0%;
+	cursor: pointer;
 }
 
 
-#login{
+#login ,#register{
   margin: 2%;
   padding: 2%;
   border: 5px solid;
@@ -45,11 +76,8 @@ body {
 
 
 
-#login .Login{
 
-}
-
-#login .submit{
+#login .submit, #register .submit{
   color: #b2b9bf;
   cursor: pointer;
   margin-top: 10%;
@@ -62,7 +90,7 @@ body {
 
 }
 
-.Login input{
+.Login input, .Register input{
   font-size: 20px;
   color: #FFF;
   background: none;
@@ -76,7 +104,7 @@ body {
 
 }
 
-.Login label{
+.Login label, .Register label{
   font-size: 20px;
   position: absolute;
   left: 0;
@@ -93,7 +121,7 @@ body {
   */
 }
 
-.Login .LoginUsername label{
+.Login .LoginUsername label ,.RegisterUsername label{
   position: absolute;
   top:27%;
 }
@@ -105,49 +133,58 @@ body {
   position: absolute;
   transform: translateY(-40%);
   color: #666d73;
+}
+
+.Register input:focus + label,
+.Register input:valid + label
+{
+    font-size: 11px;
+    position: absolute;
+    transform: translateY(-40%);
+    color: #666d73;
 
 }
 
-
-#registerbutton{
-  margin-right: 50px;
+.TableTitle{
+	margin-top:1%;
+	padding:0.5%;
+	position:absolute;
+	left:40%;
+	transform:translate(50%);
+	border:#303030 solid;
+	background: rgba(39, 39, 39, 0.79);
 }
 
-#submitLogout{
-  color: #b2b9bf;
-  font-size: 20px;
-  background: none;
-  outline: none;
-  border: none;
-  left: 90%;
-  transform: translate(100%,-130%);
-  position: absolute;
-  cursor: pointer;
-}
-
-#submitLogout:hover{
-  color: #FFF;
-}
-
-.navbar{
-  padding: 10px;
-  margin: auto;
-  background: rgba(39, 39, 39, 0.79);
-}
-
-a{
-  color: #b2b9bf;
-  margin-right: 10%;
+.Users{
+	position:absolute;
+	left:25%;
+	top:22%;
+	border:#303030 solid;
+	padding:2%;
+	background: rgba(39, 39, 39, 0.79);
 
 }
 
-a:hover{
-  color: #FFF;
+.Users input{
+	color:#b2b9bf;
+	background:none;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	margin:3px;
 }
 
-h{
-  font-size: 30px;
-  margin: 5%;
-  margin-right: 0%;
-  cursor: pointer;
+.Users input:hover{
+	font-size:15px;
+	color:#FFFFFF;
+	margin:0px;
 }
+
+.Safe{
+	left:45%;
+	position:absolute;
+	transform:translate(10%,50%);
+}
+
+
+
