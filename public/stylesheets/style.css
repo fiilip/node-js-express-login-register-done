@@ -10,14 +10,21 @@ body {
   padding: 0;
 }
 
+::-webkit-scrollbar{
+	width:10px;
+}
 
-.TopBar input{
-  color: #b2b9bf;
-  font-size: 25px;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
+::-webkit-scrollbar-track{
+	background:#303030;
+}
+
+::-webkit-scrollbar-thumb{
+	background:#faa8705e;
+	border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background:rgba(156, 99, 68, 0.37);
 }
 
 #submitLogout{
@@ -26,11 +33,17 @@ body {
 	background: none;
 	outline: none;
 	border: none;
-	transform: translate(100%,-130%);
-	position:absolute;
-	left:90%;
-	cursor: pointer;
+	display:block;
+	width:10%;
+	margin-left:90%;
+	margin-top:-25px;
 
+	/*
+	left:80%;
+	transform: translate(80%,-90%);
+	position:absolute;
+	*/
+	cursor: pointer;
 }
 
 #submitLogout:hover{
@@ -46,7 +59,6 @@ body {
 a{
 	color: #b2b9bf;
 	margin-right: 10%;
-
 }
 
 a:hover{
@@ -60,8 +72,7 @@ h{
 	cursor: pointer;
 }
 
-
-#login ,#register{
+#login ,#register, #update{
   margin: 2%;
   padding: 2%;
   border: 5px solid;
@@ -74,10 +85,7 @@ h{
   transform:translate(-50%,-50%);
 }
 
-
-
-
-#login .submit, #register .submit{
+#login .submit, #register .submit, #update .submit{
   color: #b2b9bf;
   cursor: pointer;
   margin-top: 10%;
@@ -87,10 +95,9 @@ h{
   border-top: none;
   border-left: none;
   border-right: none;
-
 }
 
-.Login input, .Register input{
+.Login input, .Register input, .Update input{
   font-size: 20px;
   color: #FFF;
   background: none;
@@ -101,10 +108,9 @@ h{
   border-left: none;
   border-right: none;
   border-color: #faa8705e;
-
 }
 
-.Login label, .Register label{
+.Login label, .Register label, .Update label{
   font-size: 20px;
   position: absolute;
   left: 0;
@@ -113,56 +119,67 @@ h{
   padding-left: 12%;
   pointer-events: none;
   transition: 0.5s;
-  /*
-  pointer-events: none;
-  position: absolute;
-  transform: translateY(40%);
-  transition: 0.5s;
-  */
 }
 
-.Login .LoginUsername label ,.RegisterUsername label{
+.Login .LoginUsername label ,.RegisterUsername label , .UpdateUsername label{
   position: absolute;
   top:27%;
 }
 
-
 .Login input:focus + label,
-.Login input:valid + label{
+.Register input:focus + label,
+.Update input:focus + label,
+.Login input:valid + label,
+.Register input:valid + label,
+.Update input:valid + label
+{
   font-size: 11px;
   position: absolute;
   transform: translateY(-40%);
   color: #666d73;
 }
 
-.Register input:focus + label,
-.Register input:valid + label
-{
-    font-size: 11px;
-    position: absolute;
-    transform: translateY(-40%);
-    color: #666d73;
+.TableTitle, .Safe, .EditTitle{
+
+	border:#faa8705e solid;
+	border-radius:10px;
+	background: rgba(39, 39, 39, 0.79);
+	display:table;
+	margin:auto;
+	margin-top:4%;
+	padding:1%;
 
 }
 
-.TableTitle{
-	margin-top:1%;
-	padding:0.5%;
-	position:absolute;
-	left:40%;
-	transform:translate(50%);
-	border:#303030 solid;
-	background: rgba(39, 39, 39, 0.79);
+.SafeTitle, .TitleTable, .TitleEdit{
+	font-size:30px;
+}
+
+.Table{
+	margin:5%;
 }
 
 .Users{
-	position:absolute;
-	left:25%;
-	top:22%;
-	border:#303030 solid;
+	/*position:absolute;
+	left:20%;
+	top:20%;
+	transform:translate(5%,5%);
+	*/
+	top:20%;
+	width:90%;
+	border:#faa8705e solid;
+	border-radius:10px;
 	padding:2%;
+	margin:5%;
 	background: rgba(39, 39, 39, 0.79);
-
+}
+th{
+	padding-right:4%;
+}
+.TableName{
+	position:absolute;
+	left:7%;
+	transform:translateX(6%);
 }
 
 .Users input{
@@ -179,12 +196,3 @@ h{
 	color:#FFFFFF;
 	margin:0px;
 }
-
-.Safe{
-	left:45%;
-	position:absolute;
-	transform:translate(10%,50%);
-}
-
-
-

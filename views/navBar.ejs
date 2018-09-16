@@ -8,15 +8,18 @@
 <body>
 
     <div class="navbar">
+
         <a href="/">Home</a>
         <a href="/Register">Register</a>
         <a href="/Table">Table</a>
         <a href="Safe">Safe</a>
+
+        <form action="/logout" method="post" id="logout">
+            <input type="submit" form="logout" id="submitLogout" value="Logout" name="submitLogout" >
+        </form>
+
     </div>
 
-    <form action="/logout" method="post" id="logout">
-        <input type="submit" form="logout" id="submitLogout" value="Logout" name="submitLogout" >
-    </form>
 
 </body>
 </html>
