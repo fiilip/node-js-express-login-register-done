@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Login</title>
+    <title>Home</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
 
 
   <% include navBar.ejs %>
-
+    <h1 class="wrong"><%= wrong %></h1>
     <form id="login" action="/login" method="post">
 
       <div class="Login">

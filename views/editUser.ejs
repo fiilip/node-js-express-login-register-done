@@ -17,16 +17,16 @@
     <div class="Update">
         <h2 class="LoginText">Update</h2>
         <div class="UpdateUsername" id="UpdateUsername">
-            <input class="EditUser"  type="text" name="username" placeholder="<%= data[0].name; %>" required="">
+            <input class="EditUser" id="updateUser"  type="text" name="username" placeholder="<%= data[0].name; %>" maxlength="25">
             <label class="EditUser" for="updateUser"></label>
         </div>
 
         <div class="UpdatePassword">
-            <input class="UpdatePassword" type="password" name="password" required="">
-            <label class="UpdatePassword" for="updatePassword">Password</label>
+            <input class="Update_Password" type="password" name="password" required="" maxlength="50">
+            <label class="Update_Password" for="updatePassword">Password</label>
         </div>
 
-        <input class="submit" id="submit" type="submit" form="update" value="update" name="update" >
+        <input class="submit" id="submit" type="submit" form="update" value="Update" name="update" >
 
     </div>
 

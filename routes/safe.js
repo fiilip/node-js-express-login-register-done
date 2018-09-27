@@ -6,5 +6,4 @@ router.get("/", authenticationMiddleware(),function (req, res, next) {
    res.render("safe",{title:"safe"});
 });
 
-
 module.exports = router;

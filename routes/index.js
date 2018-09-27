@@ -3,21 +3,19 @@ const router = express.Router();
 const mysql = require("mysql");
 const dbConfig = require("../workers/dbConfig");
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
     let connection = mysql.createConnection(dbConfig);
 
     let sp= "CALL users()";
-
     connection.query(sp, (error, results, fields) =>{
         if (error){
             return console.error("error: " + error.message);
         }else{
             res.render('index', {
-                title: 'Birtun úr DB',
-                data: results[0]
+                title: ' ',
+                data: results[0],
+
             });
         }
     });

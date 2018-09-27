@@ -34,7 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 const dbConfig = require("./workers/dbConfig");
 const sessionStore = new MySQLStore(dbConfig);
 
-
 app.use(session({
     secret:"14e8wq98e4qw@4wq4",
     resave: false,

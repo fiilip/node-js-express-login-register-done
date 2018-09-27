@@ -15,13 +15,13 @@
         <h2 class="RegisterText">Register</h2>
 
         <div class="RegisterUsername" id="registerUsername">
-            <input class="RegisterUser"  type="text" name="username" required="">
+            <input class="RegisterUser"  type="text" name="username" maxlength="25" required="">
             <label class="RegisterUser" for="registerUser">Username</label>
         </div>
 
         <div class="RegisterPassword">
-            <input class="RegisterPassword" type="password" name="password" required="" >
-            <label class="RegisterPassword" for="registerPassword">Password</label>
+            <input class="Register_Password" type="password" name="password"  required="test"minlength="1" maxlength="50">
+            <label class="Register_Password" for="registerPassword">Password</label>
         </div>
 
         <input class="submit" id="submit" type="submit" form="register" value="Register" name="register" >
@@ -29,8 +29,6 @@
     </div>
 
 </form>
-
-
 
 </body>
 </html>
