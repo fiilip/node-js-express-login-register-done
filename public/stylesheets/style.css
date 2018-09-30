@@ -1,13 +1,11 @@
-
 body {
-  background-color: #303030;
-  background: url("../images/bg.jpg") no-repeat center center fixed;
-  background-color: rgb(17, 17, 17);
-  background-size: cover;
-  font-family: sans-serif;
-  color: #b2b9bf;
-  margin: 0;
-  padding: 0;
+	background: url("../images/bg.jpg") no-repeat center center fixed;
+	background-color: rgb(17, 17, 17);
+	background-size: cover;
+	font-family: sans-serif;
+	color: #b2b9bf;
+	margin: 0;
+	padding: 0;
 }
 
 ::-webkit-scrollbar{
@@ -33,6 +31,7 @@ body {
 	background: none;
 	outline: none;
 	border: none;
+	border-radius:10px;
 	position:absolute;
 	top:30px;
 	left:100%;
@@ -41,6 +40,9 @@ body {
 }
 
 #submitLogout:hover{
+	transition:0.5s;
+	box-shadow: 0 0 5px 1px rgba(154, 151, 151, 0.60);
+	background-color:rgba(154, 151, 151, 0.60);
 	color: #FFF;
 }
 
@@ -53,29 +55,19 @@ a{
 	color: #b2b9bf;
 	margin-right: 10%;
 	text-decoration:none;
-	transition:0.2s;
+	border-radius:10px;
 }
 
 a:hover{
+	transition:0.5s;
+	box-shadow: 0 0 5px 5px rgba(154, 151, 151, 0.60);
+	background-color:rgba(154, 151, 151, 0.60);
 	color: #FFF;
-	border-bottom: 1px solid;
-}
-/*
-h{
-	font-size: 30px;
-	margin: 5%;
-	cursor: pointer;
-}
-*/
-.wrong{
-	position:absolute;
-	color:red;
-	background-color:rgba(25, 25, 25,0.5);
-	left:50%;
-	transform:translateX(-50%);
+
 }
 
 .Login, .Register, .Update{
+	box-shadow: 0 0 10px 5px rgba(235, 158, 105, 0.37);
 	position:absolute;
 	top:450px;
 	left:50%;
@@ -94,11 +86,11 @@ h2{
 }
 
 #login .submit, #register .submit, #update .submit{
-  color: #b2b9bf;
-  cursor: pointer;
-  margin-left: 30%;
-  font-size: 20px;
-  background: none;
+	color: #b2b9bf;
+	cursor: pointer;
+	margin-left: 30%;
+	font-size: 20px;
+	background: none;
 	border:none;
 	border-bottom: 2px solid;
 	border-color: #faa8705e;
@@ -123,7 +115,6 @@ h2{
 	border-color: #faa8705e;
 	margin-bottom: 30px;
 	margin-top:20px;
-
 }
 
 .Login .LoginUsername label, .Login .LoginPassword label, .Register label, .Update label{
@@ -142,10 +133,10 @@ h2{
 .Register input:valid + label,
 .Update input:valid + label
 {
-  font-size: 14px;
-  position: absolute;
-  transform: translateY(-200%);
-  color: #666d73;
+	font-size: 14px;
+	position: absolute;
+	transform: translateY(-200%);
+	color: #666d73;
 }
 
 .TableTitle, .Safe, .EditTitle{
@@ -158,26 +149,16 @@ h2{
 	padding:10px;
 }
 
-
 .SafeTitle, .TitleTable, .TitleEdit{
 	font-size:30px;
 }
-/*
-.Table{
-	margin:5%;
-}
-*/
 
-#users{
-
-}
 .Users{
+	box-shadow: 0 0 10px 5px rgba(235, 158, 105, 0.37);
 	position:center;
-	/*
-	top:500px;
-	left:50%;
-	*/
-	transform:translate(0,50%);
+	margin-left:25%;
+	margin-bottom:50px;
+	transform:translate(0,25%);
 	border:#faa8705e solid;
 	border-radius:10px;
 	padding:30px;

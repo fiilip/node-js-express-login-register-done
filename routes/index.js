@@ -32,11 +32,12 @@ router.post("/edit",function (req, res, next) {
     connection.query(sp,input,(error, results, fields)=>{
         if(error){
     return console.error("error: " + error,message);
-    }else{
+        }else{
             res.render("editUser", {title: "Edit User", data: results[0]});
         }
     });
     connection.end();
 
 });
+
 module.exports = router;
